@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+    <TITLE>Pertemuan 4</TITLE>
+    <META NAME="Generator" CONTENT="EditPlus">
+    <META NAME="Author" CONTENT="">
+    <META NAME="Keywords" CONTENT="">
+    <META NAME="Description" CONTENT="">
+</HEAD>
+<BODY>
+    <p>Klik pada bagian atau area gambar sesuai dengan koordinat map yang telah ditentukan</p>
+
+    <img src="image1.png" width="145" height="126" alt="gambarku" usemap="#picturemap">
+    <video width="400" controls>
+     <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <map name="picturemap">
+        <area shape="rect" coords="0,0,82,126" href="a.htm" alt="bagianA" title="bagianA">
+        <area shape="rect" coords="60,60,30" href="b.htm" alt="bagianB" title="bagianB">
+        <area shape="rect" coords="124,58,8" href="c.htm" alt="bagianC" title="bagianC">
+    </map>
+
+    <div style="text-align:center">
+     <button onclick="tekanPause()">Play/Pause</button>
+     <button onclick="menjadiBig()">Big</button>
+     <button onclick="menjadiSmall()">Small</button>
+     <button onclick="menjadiNormal()">Normal</button>
+     <br><br>
+
+     <video id="videoku" width="430">
+       <source src="video.mp4" type="video/mp4">
+       Browser anda tidak support video HTML 5.
+     </video>
+   </div>
+   <script>
+    var VideoAku = document.getElementById("videoku");
+
+    function tekanPause() {
+      if (VideoAku.paused)
+        VideoAku.play();
+      else
+        VideoAku.pause();
+    }
+
+    function menjadiBig() {
+      VideoAku.width = 560;
+    }
+
+    function menjadiSmall() {
+      VideoAku.width = 320;
+    }
+
+    function menjadiNormal() {
+      VideoAku.width = 430;
+    }
+  </script>
+</BODY>
+</HTML>
